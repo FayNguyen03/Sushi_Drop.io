@@ -4,15 +4,15 @@ class Letter{
         this.reset();
     }
 
-    update(x, y ,w, h){ 
+    update(x, y ,w, h, py, px){ 
         if (this.collide(x, y, w, h) == false){
             this.y += this.dy;
             this.c = 0;
         }
         else{
             this.c = color(255,100,0);
-        }
 
+        }
         if (this.y + this.h > height){
             this.reset();
         }
